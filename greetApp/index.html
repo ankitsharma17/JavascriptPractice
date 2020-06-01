@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greet App</title>
-    <script src="main.js" defer></script>
+    <!-- <script src="main.js" defer></script> -->
+
 </head>
 <body>
     <h1>This is a Greet App</h1>
@@ -14,8 +15,23 @@
     <label for="">Last Name</label>
     <input id="last" placeholder="Type Last Name" type="text">
     <br><br>
-    <button  id="bt">Greet</button>
-    <button id="clearall">Clear All</button>
+    <button onclick="sayWelcome()" id="bt">Greet</button>
+    <button onclick="clearAll()" id="clearall">Clear All</button>
     <p id="output"></p>
+    <script >
+        function sayWelcome(){
+    var firstName=document.getElementById('first').value;
+    var lastName=document.getElementById('last').value;
+    var result=`Welcome ${firstName} ${lastName}`;
+    document.getElementById('output').innerText=result;
+
+}
+function clearAll(){
+    document.getElementById('first').value='';
+    document.getElementById('last').value='';
+    document.getElementById('output').innerText='';
+}
+sayWelcome();
+    </script>
 </body>
 </html>
