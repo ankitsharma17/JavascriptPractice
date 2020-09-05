@@ -1,0 +1,11 @@
+.hide{
+    display: none;
+}
+.size{
+    width: 200px;
+    height: 200px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
